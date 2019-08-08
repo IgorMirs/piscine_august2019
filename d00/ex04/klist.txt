@@ -1,0 +1,7 @@
+Credentials cache: API:59842
+        Principal: imirsali@42.US.ORG
+
+  Issued                Expires               Principal
+Aug  5 15:24:45 2019  Aug  6 01:24:45 2019  krbtgt/42.US.ORG@42.US.ORG
+Aug  5 15:24:46 2019  Aug  6 01:24:45 2019  ldap/ldap-master.42.us.org@42.US.ORG
+Aug  5 15:58:48 2019  Aug  6 01:24:45 2019  host/vgs-fn1.42.us.org@42.US.ORG
