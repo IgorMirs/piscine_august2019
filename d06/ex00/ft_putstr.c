@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imirsali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 10:21:09 by imirsali          #+#    #+#             */
-/*   Updated: 2019/08/16 09:05:25 by imirsali         ###   ########.fr       */
+/*   Created: 2019/08/09 12:46:38 by imirsali          #+#    #+#             */
+/*   Updated: 2019/08/09 12:47:39 by imirsali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	char				*dest_orig;
-	unsigned int		count;
+int			ft_putchar(char c);
 
-	dest_orig = dest;
-	count = 0;
-	while (*src != '\0' && count != n)
+void		ft_putstr(char *str)
+{
+	while (*str != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		count++;
+		ft_putchar(*str);
+		str++;
 	}
-	return (dest_orig);
 }

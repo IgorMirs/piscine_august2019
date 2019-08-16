@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imirsali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 10:21:09 by imirsali          #+#    #+#             */
-/*   Updated: 2019/08/16 09:05:25 by imirsali         ###   ########.fr       */
+/*   Created: 2019/08/15 10:07:19 by imirsali          #+#    #+#             */
+/*   Updated: 2019/08/15 18:22:11 by imirsali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	char				*dest_orig;
-	unsigned int		count;
+#include <unistd.h>
 
-	dest_orig = dest;
-	count = 0;
-	while (*src != '\0' && count != n)
+int		ft_putchar(char c);
+
+int		main(int argc, char **argv)
+{
+	while (**argv != '\0' && argc)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		count++;
+		ft_putchar(**argv);
+		(*argv)++;
 	}
-	return (dest_orig);
+	ft_putchar('\n');
+	return (0);
 }

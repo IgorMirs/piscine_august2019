@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imirsali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 10:21:09 by imirsali          #+#    #+#             */
-/*   Updated: 2019/08/16 09:05:25 by imirsali         ###   ########.fr       */
+/*   Created: 2019/08/15 09:48:55 by imirsali          #+#    #+#             */
+/*   Updated: 2019/08/15 09:50:08 by imirsali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	char				*dest_orig;
-	unsigned int		count;
+#include <unistd.h>
 
-	dest_orig = dest;
-	count = 0;
-	while (*src != '\0' && count != n)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-		count++;
-	}
-	return (dest_orig);
+int		ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (0);
 }

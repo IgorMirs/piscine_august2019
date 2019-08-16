@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imirsali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 10:21:09 by imirsali          #+#    #+#             */
-/*   Updated: 2019/08/16 09:05:25 by imirsali         ###   ########.fr       */
+/*   Created: 2019/08/09 22:16:46 by imirsali          #+#    #+#             */
+/*   Updated: 2019/08/09 22:16:57 by imirsali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strncpy(char *dest, char *src, unsigned int n)
+int		ft_strlen(char *str)
 {
-	char				*dest_orig;
-	unsigned int		count;
+	int count;
 
-	dest_orig = dest;
-	count = 0;
-	while (*src != '\0' && count != n)
+	if (str)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		count++;
+		count = 0;
+		while (*str != '\0')
+		{
+			count++;
+			str++;
+		}
+		return (count);
 	}
-	return (dest_orig);
+	return (0);
 }

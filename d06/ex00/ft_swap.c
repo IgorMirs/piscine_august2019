@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imirsali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 10:21:09 by imirsali          #+#    #+#             */
-/*   Updated: 2019/08/16 09:05:25 by imirsali         ###   ########.fr       */
+/*   Created: 2019/08/09 09:46:17 by imirsali          #+#    #+#             */
+/*   Updated: 2019/08/15 09:51:55 by imirsali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_swap(int *a, int *b)
 {
-	char				*dest_orig;
-	unsigned int		count;
+	int c;
 
-	dest_orig = dest;
-	count = 0;
-	while (*src != '\0' && count != n)
+	if (a && b)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		count++;
+		c = *a;
+		*a = *b;
+		*b = c;
 	}
-	return (dest_orig);
 }
